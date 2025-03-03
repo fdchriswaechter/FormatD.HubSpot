@@ -5,7 +5,6 @@ namespace FormatD\HubSpot\Service;
 use HubSpot\Discovery\Discovery;
 use Neos\Flow\Annotations as Flow;
 use Psr\Http\Message\ResponseInterface;
-use Psr\Log\LoggerInterface;
 
 /**
  * @Flow\Scope("singleton")
@@ -23,12 +22,6 @@ class HubSpotService
 	 * @var Discovery
 	 */
 	protected Discovery $hubspotApi;
-
-    /**
-     * @Flow\Inject
-     * @var LoggerInterface
-     */
-    protected $logger;
 
 	/**
 	 * @return void
