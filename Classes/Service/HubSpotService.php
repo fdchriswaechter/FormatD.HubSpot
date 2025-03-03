@@ -4,6 +4,7 @@ namespace FormatD\HubSpot\Service;
 
 use HubSpot\Discovery\Discovery;
 use Neos\Flow\Annotations as Flow;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -41,9 +42,9 @@ class HubSpotService
 	 * @param array $formFields
 	 * @param array $context
 	 * @param array $legalConsentOptions
-	 * @return \Psr\Http\Message\ResponseInterface
+	 * @return ResponseInterface
 	 */
-	public function submitForm(string $formGuid, array $formFields, array $context, array $legalConsentOptions): \Psr\Http\Message\ResponseInterface {
+	public function submitForm(string $formGuid, array $formFields, array $context, array $legalConsentOptions): ResponseInterface {
 
 		$requestOptions = [
 			'method' => 'POST',
